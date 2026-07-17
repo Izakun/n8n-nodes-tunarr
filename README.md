@@ -12,5 +12,18 @@ Install via **Settings -> Community Nodes -> Install** -> `n8n-nodes-tunarr`.
 ## Credentials
 Configure the base URL and authentication in the **Tunarr API** credential.
 
+## Usage example
+
+List IPTV channels:
+
+1. Add the node after a trigger (e.g. *When clicking 'Test workflow'*).
+2. Select your credential.
+3. **Get Channels**.
+4. Execute the node — example output:
+
+```json
+{ "id": "9c...", "number": 1, "name": "Movies 24/7", "programCount": 320 }
+```
+
 ## Disclaimer
 Not affiliated with or endorsed by the respective project.
