@@ -16,7 +16,7 @@ export class Tunarr implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Tunarr',
 		name: 'tunarr',
-		icon: { light: 'file:tunarr.svg', dark: 'file:tunarr.svg' },
+		icon: { light: 'file:tunarr.svg', dark: 'file:tunarr.dark.svg' },
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
