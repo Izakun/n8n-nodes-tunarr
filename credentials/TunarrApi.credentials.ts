@@ -1,4 +1,9 @@
-import { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
+import {
+	IAuthenticateGeneric,
+	ICredentialTestRequest,
+	ICredentialType,
+	INodeProperties,
+} from 'n8n-workflow';
 
 export class TunarrApi implements ICredentialType {
 	name = 'tunarrApi';
@@ -26,5 +31,12 @@ export class TunarrApi implements ICredentialType {
 			baseURL: '={{$credentials.baseUrl}}',
 			url: '/api/version',
 		},
+	};
+
+	// No transport auth to inject here (handled inside the node); this block
+	// lets the node use httpRequestWithAuthentication.
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {},
 	};
 }

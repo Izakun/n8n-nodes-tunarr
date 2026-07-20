@@ -63,7 +63,7 @@ export class Tunarr implements INodeType {
 					});
 				}
 
-				const response = await this.helpers.httpRequest({
+				const response = await this.helpers.httpRequestWithAuthentication.call(this, 'tunarrApi', {
 					method: 'GET' as IHttpRequestMethods,
 					baseURL,
 					url,
